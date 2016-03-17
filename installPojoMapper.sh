@@ -13,7 +13,7 @@ function execute
 	echo "STARTING mvn clean" $1 on $2
 	if cd $2; then
 	        pwd
-			if mvn clean $1>/dev/null;then
+			if mvn clean $1;then
 			  echo "FINSHED TASK " $2
 			else
 				error_exit "Maven error!  Aborting."
