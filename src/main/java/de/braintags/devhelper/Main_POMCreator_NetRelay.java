@@ -41,6 +41,7 @@ public class Main_POMCreator_NetRelay {
 
     POMCreator.handleProjectPath(replacer, "netrelay");
     POMCreator.handleProjectPath(replacer, "NetrelayPdfController");
+    POMCreator.handleProjectPath(replacer, "autobob-webapp");
   }
 
 }
