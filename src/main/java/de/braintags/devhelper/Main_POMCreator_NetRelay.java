@@ -40,15 +40,7 @@ public class Main_POMCreator_NetRelay {
     replacer.put("${NETRELAY_PDF_CONTROLLER_VERSION}", "1.0.0_SNAPSHOT");
 
     POMCreator.handleProjectPath(replacer, "netrelay");
-    POMCreator.handleProjectPath(replacer, "BtVertxBase");
-    POMCreator.handleProjectPath(replacer, "vertx-util");
-    POMCreator.handleProjectPath(replacer, "vertx-key-generator");
-    POMCreator.handleProjectPath(replacer, "vertx-pojo-mapper");
-    POMCreator.handleProjectPath(replacer, "vertx-pojo-mapper/vertx-pojo-mapper-common");
-    POMCreator.handleProjectPath(replacer, "vertx-pojo-mapper/vertx-pojo-mapper-common-test");
-    POMCreator.handleProjectPath(replacer, "vertx-pojo-mapper/vertx-pojo-mapper-json");
-    POMCreator.handleProjectPath(replacer, "vertx-pojo-mapper/vertx-pojo-mapper-mysql");
-    POMCreator.handleProjectPath(replacer, "vertx-pojo-mapper/vertx-pojongo");
+    POMCreator.handleProjectPath(replacer, "NetrelayPdfController");
   }
 
 }
