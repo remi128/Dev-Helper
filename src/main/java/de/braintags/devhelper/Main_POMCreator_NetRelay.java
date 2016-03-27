@@ -34,11 +34,11 @@ public class Main_POMCreator_NetRelay {
    */
   public static void main(String[] args) {
     Map<String, String> replacer = new HashMap<>();
-    replacer.put("${BT_BASE_VERSION}", "13_SNAPSHOT");
-    replacer.put("${BT_VERTX_VERSION}", "1.1.0_SNAPSHOT");
-    replacer.put("${NETRELAY_VERSION}", "10.0.0_SNAPSHOT");
-    replacer.put("${NETRELAY_CONTROLLER_VERSION}", "1.0.0_SNAPSHOT");
-    replacer.put("${NETRELAY_PDF_CONTROLLER_VERSION}", "1.0.0_SNAPSHOT");
+    replacer.put("${BT_BASE_VERSION}", "13-SNAPSHOT");
+    replacer.put("${BT_VERTX_VERSION}", "1.1.0-SNAPSHOT");
+    replacer.put("${NETRELAY_VERSION}", "10.0.0-SNAPSHOT");
+    replacer.put("${NETRELAY_CONTROLLER_VERSION}", "1.0.0-SNAPSHOT");
+    replacer.put("${NETRELAY_PDF_CONTROLLER_VERSION}", "1.0.0-SNAPSHOT");
 
     POMCreator.handleProjectPath(replacer, "netrelay");
     POMCreator.handleProjectPath(replacer, "NetRelay-Controller");

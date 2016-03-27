@@ -34,8 +34,8 @@ public class Main_POMCreator_pojo_mapper {
    */
   public static void main(String[] args) {
     Map<String, String> replacer = new HashMap<>();
-    replacer.put("${BT_BASE_VERSION}", "13_SNAPSHOT");
-    replacer.put("${BT_VERTX_VERSION}", "1.1.0_SNAPSHOT");
+    replacer.put("${BT_BASE_VERSION}", "13-SNAPSHOT");
+    replacer.put("${BT_VERTX_VERSION}", "1.1.0-SNAPSHOT");
 
     POMCreator.handleProjectPath(replacer, "BtBase");
     POMCreator.handleProjectPath(replacer, "BtVertxBase");
