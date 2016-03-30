@@ -30,6 +30,7 @@ else
 		error_exit "Maven command missing: install / deploy"
 fi
 
-execute $1  "../netrelay/"
-execute $1 "../NetrelayPdfController/"
-
+execute $1  "../NetRelay/"
+execute $1  "../NetRelay-Controller/"
+execute $1 "../NetRelay-PdfController/"
+execute $1 "../NetRelay-DemoProject/"

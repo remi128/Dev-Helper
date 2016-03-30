@@ -40,10 +40,10 @@ public class Main_POMCreator_NetRelay {
     replacer.put("${NETRELAY_CONTROLLER_VERSION}", "1.0.0-SNAPSHOT");
     replacer.put("${NETRELAY_PDF_CONTROLLER_VERSION}", "1.0.0-SNAPSHOT");
 
-    POMCreator.handleProjectPath(replacer, "netrelay");
+    POMCreator.handleProjectPath(replacer, "NetRelay");
     POMCreator.handleProjectPath(replacer, "NetRelay-Controller");
-    POMCreator.handleProjectPath(replacer, "NetRelay-Demoproject");
-    POMCreator.handleProjectPath(replacer, "NetrelayPdfController");
+    POMCreator.handleProjectPath(replacer, "NetRelay-DemoProject");
+    POMCreator.handleProjectPath(replacer, "NetRelay-PdfController");
     POMCreator.handleProjectPath(replacer, "autobob-webapp");
   }
 
