@@ -22,6 +22,8 @@ import java.util.Map;
  * 
  */
 public class Main_POMCreator_pojo_mapper {
+  public static final String BTBASE_VERSION = "15-SNAPSHOT";
+  public static final String BT_VERTX_VERSION = "1.1.0-SNAPSHOT";
 
   /**
    * 
@@ -34,8 +36,8 @@ public class Main_POMCreator_pojo_mapper {
    */
   public static void main(String[] args) {
     Map<String, String> replacer = new HashMap<>();
-    replacer.put("${BT_BASE_VERSION}", "13-SNAPSHOT");
-    replacer.put("${BT_VERTX_VERSION}", "1.1.0-SNAPSHOT");
+    replacer.put("${BT_BASE_VERSION}", BTBASE_VERSION);
+    replacer.put("${BT_VERTX_VERSION}", BT_VERTX_VERSION);
 
     POMCreator.handleProjectPath(replacer, "BtBase");
     POMCreator.handleProjectPath(replacer, "BtVertxBase");

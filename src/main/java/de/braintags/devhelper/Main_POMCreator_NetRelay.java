@@ -34,8 +34,8 @@ public class Main_POMCreator_NetRelay {
    */
   public static void main(String[] args) {
     Map<String, String> replacer = new HashMap<>();
-    replacer.put("${BT_BASE_VERSION}", "13-SNAPSHOT");
-    replacer.put("${BT_VERTX_VERSION}", "1.1.0-SNAPSHOT");
+    replacer.put("${BT_BASE_VERSION}", Main_POMCreator_pojo_mapper.BTBASE_VERSION);
+    replacer.put("${BT_VERTX_VERSION}", Main_POMCreator_pojo_mapper.BT_VERTX_VERSION);
     replacer.put("${NETRELAY_VERSION}", "10.0.0-SNAPSHOT");
     replacer.put("${NETRELAY_CONTROLLER_VERSION}", "1.0.0-SNAPSHOT");
     replacer.put("${NETRELAY_PDF_CONTROLLER_VERSION}", "1.0.0-SNAPSHOT");

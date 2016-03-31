@@ -28,6 +28,7 @@
 	<url>https://github.com/remi128/Dev-Helper</url>
 	<description>tools for dev</description>
 	<groupId>de.braintags</groupId>
+	<packaging>pom</packaging>
 
 	<build>
 		<pluginManagement>
@@ -71,4 +72,11 @@
 		</plugins>
 	</build>
 
+	<modules>
+		<module>../BtBase</module>
+		<module>../BtVertxBase</module>
+		<module>../vertx-util</module>
+		<module>../vertx-key-generator</module>
+		<module>../vertx-pojo-mapper</module>
+	</modules>
 </project>
