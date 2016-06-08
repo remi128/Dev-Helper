@@ -12,7 +12,9 @@
  */
 package de.braintags.devhelper;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -23,12 +25,20 @@ import java.util.Map;
  */
 public class Main_POMCreator_pojo_mapper {
   public static final String BTBASE_VERSION = "15-SNAPSHOT";
-  public static final String BT_VERTX_VERSION = "1.1.0-SNAPSHOT";
+  public static final String BT_VERTX_VERSION = "1.1.0";
+  public static List<String> projectList = new ArrayList();
 
-  /**
-   * 
-   */
-  public Main_POMCreator_pojo_mapper() {
+  static {
+    projectList.add("BtBase");
+    projectList.add("BtVertxBase");
+    projectList.add("vertx-util");
+    projectList.add("vertx-key-generator");
+    projectList.add("vertx-pojo-mapper");
+    projectList.add("vertx-pojo-mapper/vertx-pojo-mapper-common");
+    projectList.add("vertx-pojo-mapper/vertx-pojo-mapper-common-test");
+    projectList.add("vertx-pojo-mapper/vertx-pojo-mapper-json");
+    projectList.add("vertx-pojo-mapper/vertx-pojo-mapper-mysql");
+    projectList.add("vertx-pojo-mapper/vertx-pojongo");
   }
 
   /**
@@ -39,16 +49,9 @@ public class Main_POMCreator_pojo_mapper {
     replacer.put("${BT_BASE_VERSION}", BTBASE_VERSION);
     replacer.put("${BT_VERTX_VERSION}", BT_VERTX_VERSION);
 
-    POMCreator.handleProjectPath(replacer, "BtBase");
-    POMCreator.handleProjectPath(replacer, "BtVertxBase");
-    POMCreator.handleProjectPath(replacer, "vertx-util");
-    POMCreator.handleProjectPath(replacer, "vertx-key-generator");
-    POMCreator.handleProjectPath(replacer, "vertx-pojo-mapper");
-    POMCreator.handleProjectPath(replacer, "vertx-pojo-mapper/vertx-pojo-mapper-common");
-    POMCreator.handleProjectPath(replacer, "vertx-pojo-mapper/vertx-pojo-mapper-common-test");
-    POMCreator.handleProjectPath(replacer, "vertx-pojo-mapper/vertx-pojo-mapper-json");
-    POMCreator.handleProjectPath(replacer, "vertx-pojo-mapper/vertx-pojo-mapper-mysql");
-    POMCreator.handleProjectPath(replacer, "vertx-pojo-mapper/vertx-pojongo");
+    for (String project : projectList) {
+      POMCreator.handleProjectPath(replacer, project);
+    }
   }
 
 }

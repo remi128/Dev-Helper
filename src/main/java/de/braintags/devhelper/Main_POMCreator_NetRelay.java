@@ -12,7 +12,9 @@
  */
 package de.braintags.devhelper;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -22,6 +24,17 @@ import java.util.Map;
  * 
  */
 public class Main_POMCreator_NetRelay {
+  public static List<String> projectList = new ArrayList();
+
+  static {
+    projectList.add("NetRelay");
+    projectList.add("NetRelay-Controller");
+    projectList.add("NetRelay-DemoProject");
+    projectList.add("NetRelay-PdfController");
+    projectList.add("autobob-webapp");
+    projectList.add("NetRelay");
+    projectList.add("CreditReformVerticle");
+  }
 
   /**
    * 
@@ -40,11 +53,9 @@ public class Main_POMCreator_NetRelay {
     replacer.put("${NETRELAY_CONTROLLER_VERSION}", "1.0.0-SNAPSHOT");
     replacer.put("${NETRELAY_PDF_CONTROLLER_VERSION}", "1.0.0-SNAPSHOT");
 
-    POMCreator.handleProjectPath(replacer, "NetRelay");
-    POMCreator.handleProjectPath(replacer, "NetRelay-Controller");
-    POMCreator.handleProjectPath(replacer, "NetRelay-DemoProject");
-    POMCreator.handleProjectPath(replacer, "NetRelay-PdfController");
-    POMCreator.handleProjectPath(replacer, "autobob-webapp");
+    for (String project : projectList) {
+      POMCreator.handleProjectPath(replacer, project);
+    }
   }
 
 }
