@@ -25,7 +25,7 @@ public class POMCreator {
   private static final Logger LOGGER = Logger.getLogger(POMCreator.class.getName());
 
   private static final String BAK_DIR = "pombak";
-  private static final String TEMPLATE_SUFFIX = ".xmltpl";
+  private static final String TEMPLATE_SUFFIX = ".tpl.xml";
   private static final String POM_SUFFIX = ".xml";
   private static final SimpleDateFormat FORMAT = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
 

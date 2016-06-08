@@ -31,8 +31,7 @@ public class Main_POMCreator_NetRelay {
     projectList.add("NetRelay-Controller");
     projectList.add("NetRelay-DemoProject");
     projectList.add("NetRelay-PdfController");
-    projectList.add("autobob-webapp");
-    projectList.add("NetRelay");
+    projectList.add("autobob");
     projectList.add("CreditReformVerticle");
   }
 
