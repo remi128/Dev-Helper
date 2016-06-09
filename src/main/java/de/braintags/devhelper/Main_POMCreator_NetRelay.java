@@ -13,7 +13,6 @@
 package de.braintags.devhelper;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -24,7 +23,7 @@ import java.util.Map;
  * 
  */
 public class Main_POMCreator_NetRelay {
-  public static List<String> projectList = new ArrayList();
+  private static List<String> projectList = new ArrayList<>();
 
   static {
     projectList.add("NetRelay");
@@ -35,23 +34,19 @@ public class Main_POMCreator_NetRelay {
     projectList.add("CreditReformVerticle");
   }
 
-  /**
-   * 
-   */
-  public Main_POMCreator_NetRelay() {
+  public static Map<String, String> createReplacer() {
+    Map<String, String> replacer = Main_POMCreator_pojo_mapper.createReplacer();
+    replacer.put("${NETRELAY_VERSION}", "10.0.0-SNAPSHOT");
+    replacer.put("${NETRELAY_CONTROLLER_VERSION}", "1.0.0-SNAPSHOT");
+    replacer.put("${NETRELAY_PDF_CONTROLLER_VERSION}", "1.0.0-SNAPSHOT");
+    return replacer;
   }
 
   /**
    * @param args
    */
   public static void main(String[] args) {
-    Map<String, String> replacer = new HashMap<>();
-    replacer.put("${BT_BASE_VERSION}", Main_POMCreator_pojo_mapper.BTBASE_VERSION);
-    replacer.put("${BT_VERTX_VERSION}", Main_POMCreator_pojo_mapper.BT_VERTX_VERSION);
-    replacer.put("${NETRELAY_VERSION}", "10.0.0-SNAPSHOT");
-    replacer.put("${NETRELAY_CONTROLLER_VERSION}", "1.0.0-SNAPSHOT");
-    replacer.put("${NETRELAY_PDF_CONTROLLER_VERSION}", "1.0.0-SNAPSHOT");
-
+    Map<String, String> replacer = createReplacer();
     for (String project : projectList) {
       POMCreator.handleProjectPath(replacer, project);
     }

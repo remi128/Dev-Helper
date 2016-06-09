@@ -26,6 +26,9 @@ import java.util.Map;
 public class Main_POMCreator_pojo_mapper {
   public static final String BTBASE_VERSION = "16-SNAPSHOT";
   public static final String BT_VERTX_VERSION = "1.2.0-SNAPSHOT";
+
+  public static final String VERTX_STACK_VERSION = "3.2.1";
+
   public static List<String> projectList = new ArrayList();
 
   static {
@@ -41,14 +44,19 @@ public class Main_POMCreator_pojo_mapper {
     projectList.add("vertx-pojo-mapper/vertx-pojongo");
   }
 
+  public static Map<String, String> createReplacer() {
+    Map<String, String> replacer = new HashMap<>();
+    replacer.put("${BT_BASE_VERSION}", BTBASE_VERSION);
+    replacer.put("${BT_VERTX_VERSION}", BT_VERTX_VERSION);
+    replacer.put("${VERTX_STACK_VERSION}", VERTX_STACK_VERSION);
+    return replacer;
+  }
+
   /**
    * @param args
    */
   public static void main(String[] args) {
-    Map<String, String> replacer = new HashMap<>();
-    replacer.put("${BT_BASE_VERSION}", BTBASE_VERSION);
-    replacer.put("${BT_VERTX_VERSION}", BT_VERTX_VERSION);
-
+    Map<String, String> replacer = createReplacer();
     for (String project : projectList) {
       POMCreator.handleProjectPath(replacer, project);
     }
