@@ -18,8 +18,8 @@ import org.eclipse.jgit.transport.UsernamePasswordCredentialsProvider;
  * @author Michael Remme
  * 
  */
-public class TaggingNetRelay {
-  private static final Log LOGGER = LogFactory.getLog(TaggingNetRelay.class);
+public class TaggingAutobob {
+  private static final Log LOGGER = LogFactory.getLog(TaggingAutobob.class);
   private static final String USERNAME_PROPERTY = "userName";
   private static final String PASSWORD_PROPERTY = "password";
 
@@ -32,6 +32,8 @@ public class TaggingNetRelay {
     projectList.add("NetRelay-Controller");
     projectList.add("NetRelay-DemoProject");
     projectList.add("NetRelay-PdfController");
+    projectList.add("autobob-webapp");
+    projectList.add("CreditReformVerticle");
   }
 
   /**

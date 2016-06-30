@@ -31,14 +31,18 @@ public class Main_POMCreator_NetRelay {
     projectList.add("NetRelay-DemoProject");
     projectList.add("NetRelay-PdfController");
     projectList.add("autobob");
+    projectList.add("CreditReform");
     projectList.add("CreditReformVerticle");
   }
 
   public static Map<String, String> createReplacer() {
     Map<String, String> replacer = Main_POMCreator_pojo_mapper.createReplacer();
-    replacer.put("${NETRELAY_VERSION}", "10.0.0-SNAPSHOT");
-    replacer.put("${NETRELAY_CONTROLLER_VERSION}", "1.0.0-SNAPSHOT");
-    replacer.put("${NETRELAY_PDF_CONTROLLER_VERSION}", "1.0.0-SNAPSHOT");
+    replacer.put("${NETRELAY_VERSION}", "10.1.0-SNAPSHOT");
+    replacer.put("${NETRELAY_CONTROLLER_VERSION}", "1.1.0-SNAPSHOT");
+    replacer.put("${NETRELAY_PDF_CONTROLLER_VERSION}", "1.1.0-SNAPSHOT");
+    replacer.put("${CREDITREFORM_VERSION}", "1.0.1-SNAPSHOT");
+    replacer.put("${CREDITREFORM_VERTICLE_VERSION}", "1.1.0-SNAPSHOT");
+    replacer.put("${AUTOBOB_VERSION}", "1.1.0-SNAPSHOT");
     return replacer;
   }
 
