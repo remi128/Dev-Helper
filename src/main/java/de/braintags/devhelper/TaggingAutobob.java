@@ -23,17 +23,14 @@ public class TaggingAutobob {
   private static final String USERNAME_PROPERTY = "userName";
   private static final String PASSWORD_PROPERTY = "password";
 
-  private static final String TAGNAME = Main_POMCreator_pojo_mapper.BT_VERTX_VERSION;
+  private static final String TAGNAME = Main_POMCreator_NetRelay.AUTOBOB_VERSION;
 
   public static List<String> projectList = new ArrayList();
 
   static {
-    projectList.add("NetRelay");
-    projectList.add("NetRelay-Controller");
-    projectList.add("NetRelay-DemoProject");
-    projectList.add("NetRelay-PdfController");
-    projectList.add("autobob-webapp");
+    projectList.add("CreditReform");
     projectList.add("CreditReformVerticle");
+    projectList.add("autobob");
   }
 
   /**

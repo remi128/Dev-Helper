@@ -23,7 +23,7 @@ public class TaggingNetRelay {
   private static final String USERNAME_PROPERTY = "userName";
   private static final String PASSWORD_PROPERTY = "password";
 
-  private static final String TAGNAME = Main_POMCreator_pojo_mapper.BT_VERTX_VERSION;
+  private static final String TAGNAME = Main_POMCreator_NetRelay.NETRELAY_VERSION;
 
   public static List<String> projectList = new ArrayList();
 

@@ -24,8 +24,10 @@ import java.util.Map;
  * 
  */
 public class Main_POMCreator_pojo_mapper {
-  public static final String BTBASE_VERSION = "17";
-  public static final String BT_VERTX_VERSION = "1.3.1";
+  public static boolean SNAPSHOT = true;
+
+  public static final String BTBASE_VERSION = createVersion("19");
+  public static final String BT_VERTX_VERSION = createVersion("1.3.2");
 
   public static final String VERTX_STACK_VERSION = "3.2.1";
 
@@ -42,6 +44,10 @@ public class Main_POMCreator_pojo_mapper {
     projectList.add("vertx-pojo-mapper/vertx-pojo-mapper-json");
     projectList.add("vertx-pojo-mapper/vertx-pojo-mapper-mysql");
     projectList.add("vertx-pojo-mapper/vertx-pojongo");
+  }
+
+  public static String createVersion(String version) {
+    return version + (SNAPSHOT ? "-SNAPSHOT" : "");
   }
 
   public static Map<String, String> createReplacer() {

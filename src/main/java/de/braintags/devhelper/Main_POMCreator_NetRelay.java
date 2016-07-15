@@ -23,6 +23,10 @@ import java.util.Map;
  * 
  */
 public class Main_POMCreator_NetRelay {
+  public static final String NETRELAY_VERSION = Main_POMCreator_pojo_mapper.createVersion("10.2.0");
+  public static final String NETRELAY_CONTROLLER_VERSION = Main_POMCreator_pojo_mapper.createVersion("1.2.0");
+  public static final String AUTOBOB_VERSION = Main_POMCreator_pojo_mapper.createVersion("1.2.0");
+
   private static List<String> projectList = new ArrayList<>();
 
   static {
@@ -37,12 +41,13 @@ public class Main_POMCreator_NetRelay {
 
   public static Map<String, String> createReplacer() {
     Map<String, String> replacer = Main_POMCreator_pojo_mapper.createReplacer();
-    replacer.put("${NETRELAY_VERSION}", "10.1.0");
-    replacer.put("${NETRELAY_CONTROLLER_VERSION}", "1.1.0");
-    replacer.put("${NETRELAY_PDF_CONTROLLER_VERSION}", "1.1.0");
-    replacer.put("${CREDITREFORM_VERSION}", "1.1.0");
-    replacer.put("${CREDITREFORM_VERTICLE_VERSION}", "1.1.0");
-    replacer.put("${AUTOBOB_VERSION}", "1.1.0");
+    replacer.put("${NETRELAY_VERSION}", NETRELAY_VERSION);
+    replacer.put("${NETRELAY_CONTROLLER_VERSION}", NETRELAY_CONTROLLER_VERSION);
+    replacer.put("${NETRELAY_PDF_CONTROLLER_VERSION}", NETRELAY_CONTROLLER_VERSION);
+    replacer.put("${NETRELAY_DEMO_VERSION}", NETRELAY_CONTROLLER_VERSION);
+    replacer.put("${CREDITREFORM_VERSION}", NETRELAY_CONTROLLER_VERSION);
+    replacer.put("${CREDITREFORM_VERTICLE_VERSION}", NETRELAY_CONTROLLER_VERSION);
+    replacer.put("${AUTOBOB_VERSION}", AUTOBOB_VERSION);
     return replacer;
   }
 
