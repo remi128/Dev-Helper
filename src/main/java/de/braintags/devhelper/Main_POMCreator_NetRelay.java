@@ -37,12 +37,12 @@ public class Main_POMCreator_NetRelay {
 
   public static Map<String, String> createReplacer() {
     Map<String, String> replacer = Main_POMCreator_pojo_mapper.createReplacer();
-    replacer.put("${NETRELAY_VERSION}", "10.1.0-SNAPSHOT");
-    replacer.put("${NETRELAY_CONTROLLER_VERSION}", "1.1.0-SNAPSHOT");
-    replacer.put("${NETRELAY_PDF_CONTROLLER_VERSION}", "1.1.0-SNAPSHOT");
-    replacer.put("${CREDITREFORM_VERSION}", "1.0.1-SNAPSHOT");
-    replacer.put("${CREDITREFORM_VERTICLE_VERSION}", "1.1.0-SNAPSHOT");
-    replacer.put("${AUTOBOB_VERSION}", "1.1.0-SNAPSHOT");
+    replacer.put("${NETRELAY_VERSION}", "10.1.0");
+    replacer.put("${NETRELAY_CONTROLLER_VERSION}", "1.1.0");
+    replacer.put("${NETRELAY_PDF_CONTROLLER_VERSION}", "1.1.0");
+    replacer.put("${CREDITREFORM_VERSION}", "1.1.0");
+    replacer.put("${CREDITREFORM_VERTICLE_VERSION}", "1.1.0");
+    replacer.put("${AUTOBOB_VERSION}", "1.1.0");
     return replacer;
   }
 

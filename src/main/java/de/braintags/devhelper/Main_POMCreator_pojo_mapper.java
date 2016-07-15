@@ -24,8 +24,8 @@ import java.util.Map;
  * 
  */
 public class Main_POMCreator_pojo_mapper {
-  public static final String BTBASE_VERSION = "17-SNAPSHOT";
-  public static final String BT_VERTX_VERSION = "1.3.0-SNAPSHOT";
+  public static final String BTBASE_VERSION = "17";
+  public static final String BT_VERTX_VERSION = "1.3.1";
 
   public static final String VERTX_STACK_VERSION = "3.2.1";
 
