@@ -29,9 +29,9 @@ public class Main_POMCreator_pojo_mapper {
   public static final String BTBASE_VERSION = createVersion("19");
   public static final String BT_VERTX_VERSION = createVersion("1.3.2");
 
-  public static final String VERTX_STACK_VERSION = "3.2.1";
+  public static final String VERTX_STACK_VERSION = "3.3.2";
 
-  public static List<String> projectList = new ArrayList();
+  public static List<String> projectList = new ArrayList<>();
 
   static {
     projectList.add("BtBase");
