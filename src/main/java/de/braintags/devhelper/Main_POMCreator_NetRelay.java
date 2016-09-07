@@ -29,6 +29,7 @@ public class Main_POMCreator_NetRelay {
   public static final String AUTOBOB_VERSION = Main_POMCreator_pojo_mapper.createVersion("1.2.0");
   public static final String THYMELEAF_VERSION = "3.0.1.RELEASE";
   public static final String NETRELAY_CMS_VERSION = "1.0.0";
+  public static final String DATASTORE_AUTH = "1.0.0";
 
   private static List<String> projectList = new ArrayList<>();
 
@@ -56,6 +57,7 @@ public class Main_POMCreator_NetRelay {
     replacer.put("${AUTOBOB_VERSION}", AUTOBOB_VERSION);
     replacer.put("${THYMELEAF_VERSION}", THYMELEAF_VERSION);
     replacer.put("${NETRELAY_CMS_VERSION}", NETRELAY_CMS_VERSION);
+    replacer.put("${DATASTORE_AUTH}", DATASTORE_AUTH);
     return replacer;
   }
 
