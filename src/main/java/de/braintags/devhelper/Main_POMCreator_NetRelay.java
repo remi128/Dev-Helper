@@ -23,14 +23,18 @@ import java.util.Map;
  * 
  */
 public class Main_POMCreator_NetRelay {
+
   public static final String NETRELAY_VERSION = Main_POMCreator_pojo_mapper.createVersion("10.2.0");
   public static final String NETRELAY_CONTROLLER_VERSION = Main_POMCreator_pojo_mapper.createVersion("1.2.0");
   public static final String AUTOBOB_VERSION = Main_POMCreator_pojo_mapper.createVersion("1.2.0");
   public static final String THYMELEAF_VERSION = "3.0.1.RELEASE";
+  public static final String NETRELAY_CMS_VERSION = "1.0.0";
 
   private static List<String> projectList = new ArrayList<>();
 
   static {
+    Main_POMCreator_pojo_mapper.SNAPSHOT = true;
+
     projectList.add("NetRelay");
     projectList.add("NetRelay-Controller");
     projectList.add("NetRelay-DemoProject");
@@ -38,6 +42,7 @@ public class Main_POMCreator_NetRelay {
     projectList.add("autobob");
     projectList.add("CreditReform");
     projectList.add("CreditReformVerticle");
+    projectList.add("NetRelay-CMS");
   }
 
   public static Map<String, String> createReplacer() {
@@ -50,6 +55,7 @@ public class Main_POMCreator_NetRelay {
     replacer.put("${CREDITREFORM_VERTICLE_VERSION}", NETRELAY_CONTROLLER_VERSION);
     replacer.put("${AUTOBOB_VERSION}", AUTOBOB_VERSION);
     replacer.put("${THYMELEAF_VERSION}", THYMELEAF_VERSION);
+    replacer.put("${NETRELAY_CMS_VERSION}", NETRELAY_CMS_VERSION);
     return replacer;
   }
 
