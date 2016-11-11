@@ -30,7 +30,7 @@ else
 		error_exit "Maven command missing: install / deploy"
 fi
 
-execute $1 "../vertx-auth-datastore/"
+# execute $1 "../vertx-auth-datastore/"
 execute $1  "../NetRelay/"
 execute $1  "../NetRelay-Controller/"
 execute $1 "../NetRelay-PdfController/"
