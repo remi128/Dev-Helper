@@ -35,5 +35,4 @@ execute $1  "../NetRelay/"
 execute $1  "../NetRelay-Controller/"
 execute $1 "../NetRelay-PdfController/"
 execute $1 "../NetRelay-DemoProject/"
-execute $1 "../NetRelay-CMS/"
 
